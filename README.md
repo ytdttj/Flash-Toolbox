@@ -1,10 +1,10 @@
 # Flash Toolbox 刷机工具箱
 
-'Made by ytdttj , using C++.'
+*Made by ytdttj , using C++.*
 
 致力于简化刷机过程，让更多人享受刷机的乐趣
 
-Beta 1.0 and Beta 1.1 are tested by MarkFu.
+*Beta 1.0 and Beta 1.1 are tested by MarkFu.*
 
 启动器更换功能已在OPPO Find X上通过测试，理论上OPPO通用
 暂时未支持其他机型／系统
