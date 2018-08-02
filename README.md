@@ -11,3 +11,4 @@
 如果您知道其他系统的启动器包名，可以发送至ytdttj@163.com，帮助我适配其他机型，谢谢啦～
 
 如果你喜欢我的作品，可以通过这个二维码来打赏我哦，一分也是爱～
+![Alipay](https://github.com/ytdttj/Flash-Toolbox/blob/master/1533155180207.jpg)
