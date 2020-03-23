@@ -61,7 +61,7 @@ void adb()
 	cin>>tmp;
 	switch(tmp)
 	{
-		default : cout<<"不是一个选项噢~";
+		default : cout<<"不是一个选项噢~";adb();break;
 		case 1 : adb1();break;
 		case 2 : adb2();break;
 		case 3 : adb3();break;
@@ -102,7 +102,7 @@ void adb3()//jh
 {
 	//
 	system("cls");
-	cout<<"请选择你要激活的软件：\n1.冰箱    2.空调狗\n3.小黑屋";
+	cout<<"请选择你要激活的软件：\n1.冰箱    2.空调狗\n3.小黑屋\n4.返回上一级菜单\n";
 	cin>>tmp;
     if (tmp == 1)
     {
@@ -142,6 +142,11 @@ void adb3()//jh
         cout<<"出现Success之类的字样就成功啦！\n";
         system("adb -d shell sh /sdcard/Android/data/web1n.stopapp/files/demon.sh");
         cout<<"\n如果失败，请仔细检查上述过程是否缺漏；解除小黑屋权限：解冻所有应用，然后到小黑屋设置里点击卸载，确认后即可解除";
+    }
+    if (tmp == 4)
+    {
+        system("cls");
+        adb();
     }
 }
 
@@ -193,7 +198,7 @@ void fsb()//
 	cin>>tmp;
 	switch(tmp)
 	{
-		default : cout<<"不是一个选项噢~";
+		default : cout<<"不是一个选项噢~";fsb();break;
 		case 1 : fsb1();break;
 		case 2 : fsb2();break;
 		case 3 : fsb3();break;
@@ -241,7 +246,7 @@ void fsb3()//bl
 	cout<<"再次提醒！！小米和华为机型请绕道，否则机子死了我不负责任233\n\n那么，准备好了吗？按任意键继续吧？\n";
 	system("pause");
 	cout<<"\n那么开始咯！等到出现Bootloader Lock State : UNLOCKED就是成功啦！\n后续更新会推出BL回锁功能，敬请期待~\n\n";
-	system("fastboot oem unlock");
+	system("fastboot flashing unlock");
 }
 
 
