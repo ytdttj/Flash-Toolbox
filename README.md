@@ -17,5 +17,8 @@
 7.刷入Boot/System.img<br>
 8.（部分机型）解锁Bootloader<br>
 
+### 更新日志
+[点这里](https://github.com/ytdttj/Flash-Toolbox/releases "")<br>
+
 如果你喜欢我的作品，可以通过这个二维码来打赏我哦，一分也是爱～
 [支付宝点这里](https://github.com/ytdttj/Flash-Toolbox/blob/master/1533155180207.jpg)
