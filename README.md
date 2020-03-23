@@ -4,7 +4,7 @@
 
 致力于简化刷机过程，让更多人享受刷机的乐趣
 
-*Beta 1.0 and Beta 1.1 are tested by MarkFu.*
+*Beta 1.0 and Beta 1.1 are tested by MarkFu.*<br>
 `I am not responsible for anything might happen to your phone!`
 
 ### 目前支持功能
