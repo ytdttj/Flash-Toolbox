@@ -1,0 +1,2 @@
+D:\C++Projects\CSG Flash Toolbox\x64\Debug\CSG Flash Toolbox.exe
+D:\C++Projects\CSG Flash Toolbox\x64\Debug\CSG Flash Toolbox.pdb

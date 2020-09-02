@@ -19,6 +19,8 @@ void fsb1(void);
 void fsb2(void);
 void fsb3(void);
 
+void fx2p(void);
+
 void color();
 
 int main()
@@ -28,7 +30,7 @@ int main()
 	system("title CSG刷机工具箱");
 	cout<<"欢迎使用CSG团队出品的刷机工具箱\n----------------------------\n使用前请确认你的手机已开启ADB调试,或已进入fastboot模式\n并且已连接电脑!!(划重点)\n----------------------------\n";
 	system("pause");
-	cout<<"请选择你的连接方式：1.ADB(Recovery)    2.Fastboot\n3.更改工具箱配色\n\n";
+	cout<<"请选择你的连接方式：\n1.ADB(Recovery)\n2.Fastboot\n3.更改工具箱配色\n4.Find X2 Pro限定\n\n";
 	cin>>tmp;
 	if (tmp == 1)
 	{
@@ -42,6 +44,10 @@ int main()
     {
         color();
     }
+	else if (tmp == 4)
+	{
+		fx2p();
+	}
 	else
 	{
 		cout<<"这不是一个选项，请退出重新开始噢~\n";
@@ -263,6 +269,48 @@ void color()
 		default : cout<<"不是一个选项噢~";
 		case 1 : system("color 0a");system("cls");main();break;
 		case 2 : system("color 3f");system("cls");main();break;
+	}
+}
+
+void fx2p()
+{
+	//
+	system("cls");
+	cout << "请确定你已经做好数据备份，并且通过了深度测试审核。\n确认后";
+	system("pause");
+	cout << "那么现在，请严格按照指示操作。\n\n点击深度测试APP里的“开始深度测试”按钮，手机将自动重启到fastboot\n";
+	cout << "进入fastboot后";
+	system("pause");
+	cout << "现在开始解锁BL...";
+	system("cls");
+	system("fastboot flashing unlock");
+	cout << "\n现在你的手机应该会显示一大串英文，下面有一个选项是“UNLOCK THE BOOTLOADER”\n请用音量键选中它，然后电源键确定\n\n";
+	cout << "然后你的手机会自动清空所有数据，并且自动重启到系统，请开启开发者选项并允许调试后";
+	system("pause");
+	cout << "\n接下来将刷入Magisk，如果不需要请输入1，程序将自动退出：";
+	cin >> tmp;
+	if (tmp == 1)
+	{
+		system("cls");
+		cout << "感谢使用，再见！";
+	}
+	else
+	{
+		system("cls");
+		cout << "接下来将要重启到fastboot模式，并刷入Magisk\n\n";
+		system("adb reboot bootloader");
+		cout << "重启到fastboot后";
+		system("pause");
+		system("fastboot flash boot Magisk_A15.img");
+		system("fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img");
+		cout << "Magisk刷写完毕，即将自动重启并安装Magisk Manager\n\n";
+		system("fastboot reboot");
+		cout << "开机后";
+		system("pause");
+		cout << "\n开始安装Magisk Manager\n";
+		system("adb install MagiskManager-v7.5.1.apk");
+		cout << "安装完毕！祝你玩机愉快！";
+		system("pause");
 	}
 }
 
