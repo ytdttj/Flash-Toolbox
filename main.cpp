@@ -20,6 +20,9 @@ void fsb2(void);
 void fsb3(void);
 
 void fx2p(void);
+void fx2p1(void);
+void fx2p2(void);
+void fx2p3(void);
 
 void color();
 
@@ -274,7 +277,7 @@ void color()
 
 void fx2p()
 {
-	//
+	/*前一个版本的代码
 	system("cls");
 	cout << "请确定你已经做好数据备份，并且通过了深度测试审核。\n确认后";
 	system("pause");
@@ -312,14 +315,89 @@ void fx2p()
 		cout << "安装完毕！祝你玩机愉快！";
 		system("pause");
 	}
+	*/
+	system("cls");
+	cout << "你解锁了吗？\n\n1.解锁了，刷Magisk\n2.没解锁，请给我一条龙服务\n3.没解锁，但是不要Magisk\n\n";
+	cout << "请输入数字选择：";
+	cin >> tmp;
+	switch (tmp)
+	{
+		default : cout << "？？重新选择"; fx2p(); break;
+		case 1: fx2p1(); break;
+		case 2: fx2p2(); break;
+		case 3: fx2p3(); break;
+	}
 }
 
+void fx2p1()
+{
+	//
+	system("cls");
+	cout << "即将开始刷入Magisk，请将你的手机重启至fastboot\n完成后";
+	system("pause");
+	system("fastboot devices");
+	cout << "\n如果显示了xxxxxxxxxx  fastboot说明你的手机已经连接上了\n";
+	system("pause");
+	system("fastboot flash boot Magisk_A15.img");
+	system("fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img");
+	cout << "Magisk刷写完毕，即将自动重启并安装Magisk Manager\n\n";
+	system("fastboot reboot");
+	cout << "开机后";
+	system("pause");
+	cout << "\n开始安装Magisk Manager\n";
+	system("adb install MagiskManager-v7.5.1.apk");
+	cout << "安装完毕！祝你玩机愉快！";
+	system("pause");
+}
 
+void fx2p2()
+{
+	//
+	system("cls");
+	cout << "请确定你已经做好数据备份，并且通过了深度测试审核。\n确认后";
+	system("pause");
+	cout << "那么现在，请严格按照指示操作。\n\n点击深度测试APP里的“开始深度测试”按钮，手机将自动重启到fastboot\n";
+	cout << "进入fastboot后";
+	system("pause");
+	cout << "现在开始解锁BL...";
+	system("cls");
+	system("fastboot flashing unlock");
+	cout << "\n现在你的手机应该会显示一大串英文，下面有一个选项是“UNLOCK THE BOOTLOADER”\n请用音量键选中它，然后电源键确定\n\n";
+	cout << "然后你的手机会自动清空所有数据，并且自动重启到系统，请开启开发者选项并允许调试后";
+	system("pause");
+	system("cls");
+	cout << "接下来将要重启到fastboot模式，并刷入Magisk\n\n";
+	system("adb reboot bootloader");
+	cout << "重启到fastboot后";
+	system("pause");
+	system("fastboot flash boot Magisk_A15.img");
+	system("fastboot --disable-verity --disable-verification flash vbmeta vbmeta.img");
+	cout << "Magisk刷写完毕，即将自动重启并安装Magisk Manager\n\n";
+	system("fastboot reboot");
+	cout << "开机后";
+	system("pause");
+	cout << "\n开始安装Magisk Manager\n";
+	system("adb install MagiskManager-v7.5.1.apk");
+	cout << "安装完毕！祝你玩机愉快！";
+	system("pause");
+}
 
-
-
-
-
+void fx2p3()
+{
+	//
+	system("cls");
+	cout << "请确定你已经做好数据备份，并且通过了深度测试审核。\n确认后";
+	system("pause");
+	cout << "那么现在，请严格按照指示操作。\n\n点击深度测试APP里的“开始深度测试”按钮，手机将自动重启到fastboot\n";
+	cout << "进入fastboot后";
+	system("pause");
+	cout << "现在开始解锁BL...";
+	system("cls");
+	system("fastboot flashing unlock");
+	cout << "\n现在你的手机应该会显示一大串英文，下面有一个选项是“UNLOCK THE BOOTLOADER”\n请用音量键选中它，然后电源键确定\n\n";
+	cout << "然后你的手机会自动清空所有数据，并且自动重启到系统，就是解锁完毕了";
+	system("pause");
+}
 
 
 
