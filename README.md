@@ -16,6 +16,7 @@
 6.刷入Recovery<br>
 7.刷入Boot/System.img<br>
 8.（部分机型）解锁Bootloader<br>
+9.Find X2系列解锁/刷Magisk一条龙
 
 ### 更新日志
 [点这里](https://github.com/ytdttj/Flash-Toolbox/releases "")<br>
