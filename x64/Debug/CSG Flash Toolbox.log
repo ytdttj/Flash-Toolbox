@@ -1,1 +1,10 @@
 ﻿  main.cpp
+D:\C++Projects\CSG Flash Toolbox\main.cpp(346,10): warning C4129: “A”: 不可识别的字符转义序列
+D:\C++Projects\CSG Flash Toolbox\main.cpp(346,10): warning C4129: “M”: 不可识别的字符转义序列
+D:\C++Projects\CSG Flash Toolbox\main.cpp(366,10): warning C4129: “A”: 不可识别的字符转义序列
+D:\C++Projects\CSG Flash Toolbox\main.cpp(366,10): warning C4129: “M”: 不可识别的字符转义序列
+D:\C++Projects\CSG Flash Toolbox\main.cpp(420,10): warning C4129: “A”: 不可识别的字符转义序列
+D:\C++Projects\CSG Flash Toolbox\main.cpp(420,10): warning C4129: “M”: 不可识别的字符转义序列
+D:\C++Projects\CSG Flash Toolbox\main.cpp(438,10): warning C4129: “A”: 不可识别的字符转义序列
+D:\C++Projects\CSG Flash Toolbox\main.cpp(438,10): warning C4129: “M”: 不可识别的字符转义序列
+  CSG Flash Toolbox.vcxproj -> D:\C++Projects\CSG Flash Toolbox\x64\Debug\CSG Flash Toolbox.exe
